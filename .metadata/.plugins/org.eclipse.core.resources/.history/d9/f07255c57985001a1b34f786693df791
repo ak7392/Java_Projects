@@ -1,0 +1,9 @@
+package Evaluation;
+
+public class LinkedList {
+	int i;
+	LinkedList next;
+	public LinkedList(int i) {
+		this.i = i;
+	}
+}

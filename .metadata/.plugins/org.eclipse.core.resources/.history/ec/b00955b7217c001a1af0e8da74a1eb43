@@ -1,0 +1,34 @@
+package Exception_Programs;
+import java.lang.String;
+
+
+public class BinaryToDecimal {
+	
+	double j = 0;
+	
+	public void BinaryDec(String binary)throws NumberFormatException, exceptionClass  {
+		for (int i = 0; i < binary.length(); i++) {
+			if (binary.charAt(i) == '1') {
+				j = j+ Math.pow(2, binary.length()-1-i);
+				
+			}	
+			else if (binary.charAt(i) != '1' || binary.charAt(i) != '0') {
+				throw new exceptionClass("This is not a valid Input"); 
+			}
+		}
+		System.out.println(j);
+		
+		}
+		
+	
+	
+	public static void main(String args[]) {
+		
+		BinaryToDecimal btd = new BinaryToDecimal();
+//		System.out.println(btd.BinaryDec("1101011"));
+		btd.BinaryDec("10111");
+		
+		
+	}
+
+}

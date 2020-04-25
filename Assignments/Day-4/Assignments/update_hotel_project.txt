@@ -1,0 +1,7 @@
+update hotel oop project:
+if you used room array in that project, please update it.
+
+use arraylist/hashset instead of arrays in that project.you can use methods of list/set to simplify the development.
+
+please update it and re-upload again.
+[ if you already submitted that project with list / set instead of array, you all set, you dont have to re-submit it]

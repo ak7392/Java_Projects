@@ -1,0 +1,7 @@
+package Exception_Programs;
+
+public class exception_class extends Exception {
+	public static final void main(String args[]) {
+		System.out.println("This is not a valid Input");
+}
+}

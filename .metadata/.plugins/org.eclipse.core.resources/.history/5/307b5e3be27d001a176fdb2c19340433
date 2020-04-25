@@ -1,0 +1,38 @@
+package Hotel_Components;
+
+public class HotelTest {
+	
+	public static void main(String args[]) {
+		Hotel2 obj1 = new Hotel2("RAMADA", "Chennai");
+		obj1.addRooms(10);
+//		Room obj2 = new Room(1, "Abhinav", 'y',"King", 1200.00);
+//		Room obj3 = new Room(2, "Bet", 'y',"King", 1300.00);
+//		Room obj4 = new Room(3, "Greg", 'y',"King", 1250.00);
+		obj1.addReservation(4,"David", 'y', "Queen", 1250.00);
+		obj1.addReservation(5,"Cassandra", 'n', "Queen", 1250.00);
+		obj1.addReservation(6,"Tony",'n', "King",  1250.00);
+		//System.out.println(obj2.toString());
+//		System.out.println(obj3.toString());
+//		System.out.println(obj4.toString());
+//		System.out.println(obj1.getDailySales());
+//		System.out.println(obj1.AllRooms());
+		obj1.printReservations();
+		
+//		System.out.println(obj1.toString());
+		
+//		System.out.println(obj1.toString());
+//		System.out.println("---------------------------");
+//		System.out.println("Testing Some Basic Functions");
+//		System.out.println("---------------------------");
+//		System.out.println("Occupancy Percentage: ");
+//		System.out.println(obj1.occupancyPercentage());
+//		System.out.println("Canelling Reservation");
+//		obj1.cancelReservation("Tony");
+//		System.out.println("Printing new Reservation List: ");
+//		obj1.printReservations();
+		
+	
+		
+	}
+
+}

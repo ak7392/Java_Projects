@@ -1,0 +1,50 @@
+package Exception_Programs;
+import java.lang.String;
+
+class exceptionClass extends IllegalArgumentException {
+	/**
+	 * 
+	 */
+	exceptionClass(String s){
+		super(s);
+}
+}
+
+public class BinaryToDecimal {
+	
+	double j = 0;
+	
+	public void BinaryDec(String binary) throws exceptionClass {
+		if (!isboolean(binary)) {
+			throw new exceptionClass("This is not a valid Binary Input");
+		}
+		for (int i = 0; i < binary.length(); i++) {
+			if (binary.charAt(i) == '1') {
+				j = j+ Math.pow(2, binary.length()-1-i);
+				System.out.println(j);
+			}	
+			
+		}
+		
+		}
+	
+	public static boolean isboolean(String s) {
+		for(char ch: s.toCharArray()) {
+			if (ch != '0' || ch != '1') 
+				return false;	  
+		}
+		return true;
+	}
+		
+	
+	
+	public static void main(String args[]) throws exceptionClass {
+		
+		BinaryToDecimal btd = new BinaryToDecimal();
+//		System.out.println(btd.BinaryDec("1101011"));
+		btd.BinaryDec("1232334");
+		
+		
+	}
+
+}

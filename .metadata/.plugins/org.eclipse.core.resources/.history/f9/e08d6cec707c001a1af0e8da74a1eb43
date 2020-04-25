@@ -1,0 +1,54 @@
+package Exception_Programs;
+
+public class ExceptionAssignmentQues2 {
+	
+	public static int[] integerarraymath(int[] numArray, int num)  {
+		int[] result = new int[numArray.length];
+			 
+		for (int i=0; i <= numArray.length-1;i++) {
+			
+			try {
+			
+				int rem = numArray[i] % num;
+				result[i] = numArray[i] / num;
+				if (rem != 0) throw new IllegalArgumentException("New");
+			
+			}
+			catch(ArithmeticException ae){
+			
+
+				System.out.println("Zero division Error");
+			}
+			
+			catch(IllegalArgumentException be) {
+
+				 System.out.println("Interger Error");
+			}
+			
+		}		
+			
+		return result;
+				
+}
+		
+	
+	public static void main(String args[]){
+		String a = " ",  b = " ", c = " ";
+		int[] numArray = {2,6,4,6};
+		int[] result = integerarraymath(numArray, 2);
+		int[] result1 = integerarraymath(numArray, 3);
+		int[] result2 = integerarraymath(numArray, 0);
+		
+		for (int i=0; i <= result.length-1;i++)
+			 a += " "+ result[i];
+		System.out.println("Result with Interger division: "+a);
+		for (int i=0; i <= result1.length-1;i++)
+			b += " "+result1[i];
+		System.out.println("Result after Zero division Error: "+b);
+		for (int i=0; i <= result2.length-1;i++)
+			 c += " "+ result2[i];
+		System.out.println("Result with Interger division: "+c);
+		
+	}
+
+}

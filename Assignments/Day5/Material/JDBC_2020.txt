@@ -1,0 +1,7 @@
+update the driver class to 
+
+"Class.forName("com.mysql.cj.jdbc.Driver")"
+
+and upload the jar file from FTP for mysql data base server.
+
+which is mysql-connector-java.5.

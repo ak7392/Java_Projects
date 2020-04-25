@@ -1,0 +1,54 @@
+package CollectionsAssignmentPackage;
+import java.util.*;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class StoreVowelsandConsonents {
+	public static void SegregateVowelCosonents(char[] userArray) {
+		
+		Map<Integer, Integer> newMap = new HashMap<Integer, Integer>();
+		int n = userArray.length;
+		for(int i=0; i < n; i++) {
+			if (newMap.containsKey(userArray[i])){
+				newMap.put(newMap.get(userArray[i]), newMap.get(userArray[i])+1);
+			}
+			else {
+				newMap.put(newMap.get(userArray[i]), 1);
+			}
+		}
+		System.out.println(newMap);
+		
+	}
+	
+	
+	public static void main(String args[]) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Take Input String from user: ");
+		String userInput = sc.nextLine();
+		
+		char[] userArray = userInput.toCharArray();
+	
+		
+	
+//		MaxOccurance(arr);
+//		
+//		System.out.println("-------------");
+//		
+//		ArrayList<Integer> arr2 = new ArrayList<Integer>();
+//		arr2.add(2);
+//		arr2.add(3);
+//		arr2.add(40);
+//		arr2.add(3);
+//		arr2.add(5);
+//		arr2.add(4);
+//		arr2.add(-3);
+//		arr2.add(3);
+//		arr2.add(3);
+//		arr2.add(2);
+//		arr2.add(0);
+//		MaxOccurance(arr2);
+
+	
+	}
+
+}

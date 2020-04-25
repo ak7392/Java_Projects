@@ -1,0 +1,34 @@
+package CollectionsAssignmentPackage;
+import java.util.*;
+
+public class ArrayListOperations {
+	
+	public static void main(String args[]) {
+		ArrayList<Integer> arr = new ArrayList<Integer>();
+		ArrayList<Integer> newarr = new ArrayList<Integer>();
+		Set<Integer> hset = new HashSet<Integer>();
+		arr.add(1);
+		arr.add(2);
+		arr.add(3);
+		arr.add(4);
+		arr.add(3);
+		
+		
+		
+		for(int i = arr.size()-1; i >=0; i--) {
+			hset.add(arr.get(i));
+		}
+	
+		
+		Iterator it = hset.iterator();
+		while (it.hasNext()) {
+			int ele = (Integer)it.next();
+				newarr.add(ele);
+			
+		}
+		System.out.println(Collections.binarySearch(arr, 2));
+		
+		
+		
+	}
+}

@@ -1,0 +1,76 @@
+package Exception_Programs;
+import java.util.Scanner;
+
+class nonintresultexception  extends Exception{ // Since this is Superclass for 
+	public nonintresultexception(String i) {
+		super(i);
+	}
+	
+}
+
+public class ExceptionAssignmentQues1 {
+	
+	
+	public static void main(String args[]) {
+//			 int q = 0;
+//			 Scanner myobj = new Scanner(System.in);
+//			 System.out.println("Enter an interger: ");
+//			 int i = myobj.nextInt();
+//			 System.out.println("Enter another Interger: ");
+//			 int j = myobj.nextInt();			 
+//			 
+//			 try {
+//				
+//			 q = i/j;
+////			 quotient = a + " ";
+////			 quotient = Integer.parseInt(quotient);
+////			 System.out.println(quotient);
+//			 
+//			 }
+//			 
+//			 catch (nonintresultexception ae) {
+//				 String str = null;
+//				 str = String.format("Integer %2d divided by %2d does not give an integer", i, j);	
+//				 System.out.println(str);
+//			 }
+//			 finally {  
+//			System.out.println(q);}
+			
+
+		try
+		{
+			// declare and initialize here.
+			int a,b,c, d = 0;
+			Scanner KB=new Scanner(System.in);
+			
+			// input numbers here.
+			System.out.print("Enter first number : ");
+			a=KB.nextInt();
+       
+			System.out.print("Enter second number : ");
+			b=KB.nextInt();
+       
+			//throw to catch
+			c=a/b;
+//			System.out.println(d == (c%2));
+			int rem = a % b;
+			if ((c * b + rem) != a) {
+				throw new nonintresultexception("new");
+			}
+			
+		}
+		catch(nonintresultexception e)
+		{
+			System.out.println("Error:"+e.getMessage());
+			System.out.println("Error:"+e);
+		}
+		// here program ends.
+		System.out.println("End of Program...");
+	}
+
+			
+			
+}
+	
+	
+

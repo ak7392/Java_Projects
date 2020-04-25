@@ -1,0 +1,188 @@
+package Hotel_Components;
+import java.util.ArrayList;
+
+public class Hotel2 {
+	
+	private ArrayList<Room> rooms;
+	private int numberOfRooms = 0;
+	private float totalExpense = 0;
+	private float occupancypercentage;
+	private int roomFilled;
+	private float occupiedRooms;
+	private String name;
+	private String location;
+	private Room reserveObj;
+//	private Room reserveObj1;
+	
+	
+	
+	
+	public Hotel2(String name,String location) {
+		this.name = name;
+		this.location = location;
+		numberOfRooms = 0;
+		rooms = new ArrayList<Room>();
+		rooms.ensureCapacity(5);
+		for(int i=0; i < 5; i++) {
+			rooms.add(null);
+		}
+	}
+	
+	public Hotel2(int numberOfRooms) {
+		rooms = new ArrayList<Room>();
+		rooms.ensureCapacity(numberOfRooms);
+		for(int i=0; i < numberOfRooms; i++) {
+			rooms.add(null);
+		}
+	}
+	
+	
+	
+	public void addRooms(int num) {
+		
+		rooms.ensureCapacity(rooms.size() + num);
+		for (int i=0; i < num; i++) {
+			rooms.add(null);
+//			reserveObj1 = new Room(occupantName, bedtype,smoking);
+//			reserveObj1.setOccupied(false);
+			
+		}
+	}
+	
+	public void addReservation(int roomNo,String occupantName,char smoking, String bedtype, double rate) {
+		for (int i=0; i < rooms.size(); i++) {
+			try {
+			if ((rooms.get(i) == null) || (rooms.get(i).isOccupied() == false)) {
+				roomFilled = roomFilled + 1;
+				reserveObj = new Room(roomNo, occupantName, smoking, bedtype, rate);
+				int res = reserveObj.getRoomNum1(roomNo);
+				reserveObj.setRoomNum(res);
+				reserveObj.setOccupantName(occupantName);
+				reserveObj.setBedtype(bedtype);
+				reserveObj.setSmoking(smoking);
+				reserveObj.setOccupied(true);
+				rooms.set(i, reserveObj);
+				break;
+			}
+			}catch(NullPointerException e) {
+				continue;
+			}
+		}
+	}
+	
+	
+	public void cancelReservation(String ouccupant) {
+		for(int i =0; i < rooms.size(); i++) {
+			if (rooms.get(i) != null) {
+				if (rooms.get(i).getOccupantName() == ouccupant) {
+					rooms.set(i, null);
+				}
+			}
+		}
+	}
+	
+	
+	public void findReservation(String occupant) {
+		for (int i = 0; i < rooms.size(); i++) {
+			if (rooms.get(i) != null) {
+				if (rooms.get(i).getOccupantName() == occupant) {
+					System.out.println("Your room is reserved");
+				}else {
+					System.out.println("You have no room reserved in this hotel");
+				}
+				
+			}
+		}
+	}
+	
+	
+//	public String printReservationList() {
+//		for (int i = 0; i < rooms.size(); i++) {
+//			if (rooms.get(i) != null) {
+//				System.out.println(rooms.get(i).toString());
+//			}
+//		}
+//		return "List Finished";
+//	}
+	
+	public void printReservations() {
+	    for (int i = 0; i < rooms.size(); i++) {
+	      if (rooms.get(i) != null) {
+	        System.out.println(rooms.get(i).toString());  
+	      } else {
+	        System.out.println((i + 1) + " is not reserved");
+	      }
+	    }
+	  }
+	
+	
+	public String AllRooms() {
+		for (int i = 0; i < rooms.size(); i++) {
+			if (rooms.get(i) != null) {
+				roomFilled++;
+				System.out.println(rooms.get(i).toString());
+			}
+		}
+		return "List Finished";
+	}
+	
+	public float getDailySales() {
+		for (int i =0; i < rooms.size(); i++) {
+			if (rooms.get(i) != null) {
+				totalExpense += rooms.get(i).getRate(); 
+			}
+		}
+		return totalExpense;
+		
+	}
+	
+	public void occupancyPercentage() {
+		 		int num = rooms.size();
+		 		System.out.println(roomFilled);
+		 		System.out.println(num);
+		 		
+				occupancypercentage = (float) ((roomFilled / num) * 0.01)  ;
+				
+		System.out.println(occupancypercentage);
+	}
+	
+
+	public float getOccupiedRooms() {
+		return occupiedRooms;
+	}
+
+	public float getOccupancypercentage() {
+		return occupancypercentage;
+	}
+
+	public int getNumberOfRooms() {
+		numberOfRooms = rooms.size();
+		return numberOfRooms;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public String getLocation() {
+		return location;
+	}
+
+
+	public String toString() {
+		System.out.println("Hotel Name: ");
+		System.out.println(getName());
+		System.out.println("\nNumber of Rooms: ");
+		System.out.println(getNumberOfRooms());
+		System.out.println("\nOccupied Rooms: ");
+		System.out.println(getOccupiedRooms());
+		System.out.println("\n\n");
+		System.out.println("Room Records are: ");
+		return  AllRooms() + "\n\n";
+				
+				
+				
+	}
+		
+
+}

@@ -1,0 +1,16 @@
+package CollectionsAssignmentPackage;
+import java.util.*;
+
+public class HasMApComparable {
+	public static void main(String args[]) {
+
+	Map<Object, String> hmap = new HashMap<Object, String>();
+	
+	hmap.put(new Employee(1, "Abhinav", 70000), "Manager");
+	hmap.put(new Employee(2, "Karn", 80000), "Director");
+	hmap.put(new Employee(3, "Sweta", 85000), "ChairPerson");
+	hmap.put(new Employee(4, "Ram", 80000), "Project Manager");
+	hmap.put(new Employee(3, "Craig", 75000), "Team Lead");
+	System.out.println(hmap);
+	}
+}

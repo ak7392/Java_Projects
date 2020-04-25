@@ -1,0 +1,22 @@
+package Collections1;
+import java.util.ArrayList;
+public class GenericsDemo123 {
+	public static void main(String args[]) {
+		
+		ArrayList<String> all = new ArrayList();
+		
+		all.add("Something");
+		all.add("relevant");
+		all.add("has");
+		all.add("been");
+		all.add("added");
+		System.out.println(all);
+		ArrayList<Integer> a14 = new ArrayList();
+		for (int i=0; i<5; i++) {
+			a14.add(i);
+		}
+		System.out.println(a14);
+		
+	}
+
+}

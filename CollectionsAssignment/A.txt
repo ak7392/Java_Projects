@@ -1,0 +1,2 @@
+
+Vowels: []Consonents: [H, J, K]

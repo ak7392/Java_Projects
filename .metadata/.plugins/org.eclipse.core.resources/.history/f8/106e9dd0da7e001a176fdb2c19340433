@@ -1,0 +1,22 @@
+package Collections1;
+import java.util.LinkedList;
+
+public class LinkedListDemoApplication {
+	public static void main(String[] xyz) {
+		LinkedList ll=new LinkedList();
+		ll.add("hello");
+		ll.add(new Integer(10));
+		ll.add("hyd");
+		ll.add(1984);
+		System.out.println(ll);
+		System.out.println(ll.size());
+
+		ll.add(2,"Bangle");
+		System.out.println(ll);
+
+		System.out.println(ll.size());
+		
+		String i = (String) ll.get(ll.indexOf("hyd"));
+		System.out.println(i);
+	}
+}

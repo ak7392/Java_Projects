@@ -1,0 +1,16 @@
+package Comparator_Practise;
+import java.util.*;
+
+public class Compartor_Example {
+	
+	public static void main(String args[]) {
+		TreeSet ts = new TreeSet();
+		ts.add("abhi");
+		ts.add("New_method");
+		ts.add("Kannojia"); 
+		ts.add("practise");
+		
+		System.out.println(ts);
+	}
+
+}

@@ -1,0 +1,44 @@
+package CollectionsAssignmentPackage;
+import java.util.*;
+
+public class ArrayListOperations {
+	
+	public static <T> void main(String args[]) {
+		try {
+		ArrayList<T> arr = new ArrayList<T>();
+		ArrayList<Integer> newarr = new ArrayList<Integer>();
+		Set<Integer> hset = new HashSet<Integer>();
+	    
+		arr.add((int) 1, null);
+		arr.add((int) 2, null);
+		arr.add((int) 3, null);
+		arr.add((int) 4, null);
+		arr.add((int) 5, null);
+		
+		arr.ensureCapacity(20); // increase the array list size. 
+		
+		for(int i = arr.size(); i >=0; i--) {
+			hset.add((Integer) arr.get(i));
+		}
+	
+		
+		Iterator it = hset.iterator();
+		while (it.hasNext()) {
+			int ele = (Integer)it.next();
+				newarr.add(ele);
+			
+		}
+		System.out.println(Collections.binarySearch(newarr, 0));
+		boolean isFound = arr.contains(3);
+		System.out.println(isFound);
+		arr.remove(0);
+		System.out.println(arr);
+		
+		arr.trimToSize(); // trim to occupied size. 
+		
+		arr.set(1, (T) "Abhinav");	
+	}catch(){
+		
+	}
+	}
+}

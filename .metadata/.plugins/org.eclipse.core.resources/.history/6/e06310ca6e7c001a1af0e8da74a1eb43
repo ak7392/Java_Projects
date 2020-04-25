@@ -1,0 +1,91 @@
+package Exception_Programs;
+
+//import java.util.Scanner;
+
+//@SuppressWarnings("serial")
+//class nonintresultexception  extends IllegalArgumentException{ /**
+//	 * 
+//	 */
+////	private static final long serialVersionUID = 1L;
+//
+//// Since this is Superclass for 
+//	public nonintresultexception(String i) {
+//		super(i);
+//	}
+//
+//public String getMessage(String string) {
+//	// TODO Auto-generated method stub
+//	return null;
+//}
+//	
+//}
+//@SuppressWarnings("serial")
+//class nonintresultexception2  extends ArithmeticException{ /**
+//	 * 
+//	 */
+////	private static final long serialVersionUID = 1L;
+//
+//// Since this is Superclass for 
+//	public nonintresultexception2(String i) {
+//		super(i);
+//	}
+//
+//public String getMessage(String string) {
+//	// TODO Auto-generated method stub
+//	return null;
+//}
+//	
+//}
+//
+public class ExceptionAssignmentQues2 {
+	
+
+
+
+	public static int[] integerarraymath(int[] numArray, int num)  {
+		int[] result = new int[numArray.length];
+			 
+		for (int i=0; i <= numArray.length-1;i++) {
+			
+			try {
+			
+				int rem = numArray[i] % num;
+				result[i] = numArray[i] / num;
+				
+			
+			}
+			catch(ArithmeticException ae){
+			
+//				throw new nonintresultexception2("Zero division Error"+ ae.getMessage("New"));
+//				ae.printStackTrace();
+				System.out.println("Zero division Error");
+			}
+			
+			catch(IllegalArgumentException be) {
+//			String str;
+//			str = String.format("Integer %2d divided by %2d does not give an integer", numArray[i], num);
+//			throw new nonintresultexception2(str + be.getMessage("New"));
+//				 be.printStackTrace();
+				 System.out.println("Interger Error");
+			}
+			
+		}		
+			
+		return result;
+				
+}
+		
+	
+	public static void main(String args[]){
+		int[] numArray = {2,6,4,6};
+		
+		int[] result = integerarraymath(numArray, 2);
+		int[] result2 = integerarraymath(numArray, 0);
+		for (int i=0; i <= result.length-1;i++)
+			System.out.println(result[i]);
+		for (int i=0; i <= result2.length-1;i++)
+			System.out.println(result[i]);
+		
+	}
+
+}

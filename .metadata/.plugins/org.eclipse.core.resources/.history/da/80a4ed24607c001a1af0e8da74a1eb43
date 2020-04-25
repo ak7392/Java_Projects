@@ -1,0 +1,73 @@
+package Exception_Programs;
+
+//import java.util.Scanner;
+
+@SuppressWarnings("serial")
+class nonintresultexception  extends IllegalArgumentException{ /**
+	 * 
+	 */
+//	private static final long serialVersionUID = 1L;
+
+// Since this is Superclass for 
+	public nonintresultexception(String i) {
+		super(i);
+	}
+	
+}
+@SuppressWarnings("serial")
+class nonintresultexception2  extends ArithmeticException{ /**
+	 * 
+	 */
+//	private static final long serialVersionUID = 1L;
+
+// Since this is Superclass for 
+	public nonintresultexception2(String i) {
+		super(i);
+	}
+	
+}
+
+public class ExceptionAssignmentQues2 {
+	public static int rem;
+
+
+
+	public static int[] integerarraymath(int[] numArray, int num) throws nonintresultexception  {
+		int[] result = new int[numArray.length];
+			 
+		for (int i=0; i <= numArray.length-1;i++) {
+			if (num != 0) {
+				
+				result[i] = numArray[i] / num;
+				int rem = numArray[i] % num;
+			}
+			else {
+				throw new nonintresultexception("Zero division Error");
+			}
+			
+			
+			if (rem != 0) {
+			String str;
+			str = String.format("Integer %2d divided by %2d does not give an integer", numArray[i], num);
+			throw new nonintresultexception2(str);
+			}
+					
+			}
+		return result;
+				
+}
+		
+	
+	public static void main(String args[]) throws nonintresultexception {
+		int[] numArray = {2,6,4,6};
+		
+		int[] result = integerarraymath(numArray, 2);
+		int[] result2 = integerarraymath(numArray, 0);
+		for (int i=0; i <= result.length-1;i++)
+			System.out.println(result[i]);
+		for (int i=0; i <= result2.length-1;i++)
+			System.out.println(result[i]);
+		
+	}
+
+}

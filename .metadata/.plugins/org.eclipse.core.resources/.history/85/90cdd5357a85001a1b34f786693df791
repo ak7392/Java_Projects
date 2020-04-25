@@ -1,0 +1,31 @@
+package Evaluation;
+import java.util.*;
+
+public class LinKedListSort {
+	
+	public static void sort(LinkedList s) {
+		LinkedList temp;
+		
+		while (s != null) {
+			temp  = s.next;
+			if (temp.val < s.val) {
+				temp = s; 
+				s = s.next;
+				s.next = temp;
+			}
+		}
+		
+	}
+
+	public static void main() {
+		 LinkedList s1 = new LinkedList(1); 
+		 s1.next = new LinkedList(4);
+		 s1.next.next = new LinkedList(6); 
+		 s1.next.next.next = new LinkedList(7);
+		 
+		 
+		 
+	}
+
+	
+}

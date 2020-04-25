@@ -1,0 +1,97 @@
+package Hotel_Components;
+
+public class Room {
+	private int roomNum;
+	private String bedtype;
+	private double rate;
+	private String occupantName;
+	private char smoking;
+	private boolean occupied = false;
+	
+	
+	
+	public Room(int roomNum, String occupantName, char smoking, String bedtype, double rate) {
+		this.roomNum = roomNum;
+		this.occupantName = occupantName;
+		this.bedtype = bedtype;
+		this.smoking = smoking;
+		this.rate = rate;
+		
+	}
+
+
+	public Room(String occupantName, String bedtype, char smoking) {
+		this.occupantName = occupantName;
+		this.bedtype = bedtype;
+		this.smoking = smoking;
+	}
+
+	public int getRoomNum1(int roomNo) {
+		roomNum = roomNo;
+		return roomNum;
+	}	
+
+	public String getBedtype() {
+		return bedtype;
+	}
+	
+	public double getRate() {
+		return rate;
+	}
+
+
+	public String getOccupantName() {
+		return occupantName;
+	}
+
+	
+	public char getSmoking() {
+		return smoking;
+	}
+
+	public boolean isOccupied() {
+		return occupied;
+	}
+
+	public void setRoomNum(int roomNum) {
+		this.roomNum = roomNum;
+	}
+
+	public void setBedtype(String bedtype) {
+		this.bedtype = bedtype;
+	}
+
+	public void setRate(double rate) {
+		this.rate = rate;
+	}
+
+	public void setOccupantName(String occupantName) {
+		this.occupantName = occupantName;
+	}
+
+	public void setSmoking(char smoking) {
+		this.smoking = smoking;
+	}
+
+	public void setOccupied(boolean occupied) {
+		this.occupied = occupied;
+	}
+	
+	public String toString() {
+		return
+				"Room Number: " + getRoomNum1(roomNum)  +"\nOccupantName: " + getOccupantName()  + "\nSmoking Room: " + getSmoking()
+		+ "\nBedtype: " + getBedtype() + "\nRate: "+ getRate() + "\n\n";
+	}
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+}

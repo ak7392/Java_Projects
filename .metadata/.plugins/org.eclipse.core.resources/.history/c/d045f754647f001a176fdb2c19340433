@@ -1,0 +1,53 @@
+package CollectionsAssignmentPackage;
+import java.util.*;
+/*
+ * 3.	Write a program that reads words from keyboard and 
+ * displays all the non-duplicate words in ascending order. 
+ */
+
+
+
+public class CollectionsAssignmentQues3 {
+	public static void returnDuplicates(ArrayList StrArray) {
+		HashSet<String> map = new HashSet<String>();
+		ArrayList<String> result = new ArrayList();
+		for(int i = 0; i < StrArray.size(); i++) {
+			if (!map.contains(StrArray.get(i))){
+				map.add((String) StrArray.get(i));
+			}
+		}
+		
+		for(int j = 0; j < StrArray.size(); j++) {
+			if (map.contains(StrArray.get(j))){
+				continue;
+			}else {
+				result.add((String) StrArray.get(j));
+			}
+		}
+		Collections.sort(result);
+		System.out.println(result);
+		
+	}
+	
+	
+	public static void main() {
+		String s = " ";
+		Scanner sc = new Scanner(s);
+		ArrayList<String> stringArray = new ArrayList<String>(10);
+		System.out.println("Enter some strings and type exit to end input: ");
+		while (true){
+		    String input = sc.next();
+		    if(input.equalsIgnoreCase("stop")){ 
+		    	//break;
+	    	}
+		    else {stringArray.add(input) ;
+		    //continue;
+		    }
+		    System.out.println("end of loop"+input);
+		    break;
+		}
+		returnDuplicates(stringArray);
+		sc.close();
+	}
+	
+}

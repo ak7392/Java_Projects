@@ -1,0 +1,32 @@
+package Hotel_Components;
+
+public class Hotel {
+	
+	private static final int DEFAULT = 10;
+	private int[] arrays;
+	private String name; 
+	private String location;
+	private int numOfRooms;
+	
+	public Hotel() {
+		this(DEFAULT);
+		
+	}
+
+	public Hotel(int size) {
+		arrays = new int[size];
+	}
+	
+	public Hotel(String name, String location) {
+		this.name = name;
+		this.location = location;
+		this.numOfRooms = 0;
+	}
+	
+	public void addRooms() {
+		
+		
+	}
+	
+
+}

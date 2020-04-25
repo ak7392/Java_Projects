@@ -1,0 +1,27 @@
+package Exception_Programs;
+
+class nonintresultexception  extends RuntimeException{ // Since this is Superclass for 
+	public nonintresultexception(String i) {
+		super(i);
+	}
+	
+}
+
+public class ExceptionAssignmentQues1 {
+	
+	public static double divideIntegers(double i, double j) {
+		 double quotient = i / j;
+		 String str = null;
+		 if (quotient != Math.floor(quotient)) {
+			str = String.format("Integer %2d divided by %2d does not give an integer", i, j);	
+			throw new nonintresultexception(str);
+		 }
+		return quotient;
+		
+	}
+	
+	public static void main(String args[]) {
+		System.out.println(divideIntegers(3,2));
+	}
+	
+}

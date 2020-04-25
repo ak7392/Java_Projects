@@ -1,0 +1,52 @@
+package CollectionsAssignmentPackage;
+
+public class Employee implements Comparable<Employee> {
+	private int id; 
+	private String name; 
+	private int salary;
+	public int getId() {
+		return id;
+	}
+	public String getName() {
+		return name;
+	}
+	public int getSalary() {
+		return salary;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public void setSalary(int salary) {
+		this.salary = salary;
+	}
+	public Employee(int id, String name, int salary) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.salary = salary;
+	}
+	
+	public boolean equals(Employee o) {
+		Employee e = (Employee) o;
+		return this.id == e.id;
+		
+	}
+	
+	public int hashCode() {
+		return this.id;
+	}
+	
+	@Override
+	public int compareTo(Employee o) {
+//		if (this.getId() == o.getId()) return 0;
+		if (this.getId() > o.getId()) {
+			return -1;
+		}else
+		return 1;
+	}
+	
+
+}

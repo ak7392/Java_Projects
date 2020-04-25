@@ -1,0 +1,18 @@
+package LeetCode;
+
+public class MiddleElemntofList {
+	
+
+    public ListNode middleNode(ListNode head) {
+      ListNode a = head; 
+      ListNode b = head; 
+      
+        while (b != null && b.next != null ){
+            b = b.next.next;
+            a = a.next;
+             }
+        return a;
+    
+    }
+		
+}

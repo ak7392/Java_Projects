@@ -1,0 +1,54 @@
+Day1:
+Fundamentals:
+
+P types
+non p types: inteface,ab,c,arrays,list..
+
+FlowControl: for, while loops, String class methods.
+patterns,
+for, while, string methods...
+for loop
+for each loop: arrays/list/sets..
+Strings:
+Day2:
+OOP:
+encapsulation, abstraction, poly,inheritance:
+constructors: super and this keyword.
+parent class,child class.
+instance,static variables..
+toString()
+classes,method, invoke methods, loops,
+loops, data: arrays/, you can use list/set/maps
+
+instead of loops use iterator?
+
+list****
+
+Day3: exceptions, handle exceptions every where?
+Objective Questins?
+
+SQL? one or two objective?
+
+Day4 assignments: ********
+
+list with for, while :list methods...manipulating the list, ....
+
+sort a list: decreasing or increasing order: comparable interface.
+binarysearch of list.
+
+set if required.
+
+if reqired Map for holding key,value pairs..
+
+sql?
+
+class Test // its visible only in that package
+{
+public int i;
+public float f;// they also  visibe nly that package only
+}
+
+
+
+
+

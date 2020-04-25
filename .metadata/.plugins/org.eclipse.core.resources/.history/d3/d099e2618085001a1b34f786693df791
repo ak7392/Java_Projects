@@ -1,0 +1,39 @@
+package Evaluation;
+import java.util.*;
+
+public class LinkedList2 {
+	public static int convert(int s) {
+		ArrayList<Integer> arr = new ArrayList<Integer>();
+		int[] res = new int[arr.size()];
+		int decimal = 0; 
+		int quotient;
+		int rem = 0;
+		
+		while (s != 1) {
+			rem = 0;
+			quotient = (int) s / 2; 
+			rem  = quotient%2;
+			arr.add(rem); 
+			arr.add(rem);
+				
+		}
+		
+
+		
+		
+		for(int i = arr.size(); i > 0 ; i--) {
+			res[i] = arr.get(i); 	
+		}
+		
+		for(int i =0; i <= res.length-1; i++) { 
+			decimal += 2 * res[i];
+			
+		}
+		
+		return decimal;
+	}
+	public static void main(String args[]) {
+		
+		System.out.println(LinkedList2.convert(13));
+	}
+}

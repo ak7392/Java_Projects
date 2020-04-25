@@ -1,0 +1,40 @@
+package CollectionsAssignmentPackage;
+import java.util.*;
+
+//class EmpComp implements Comparator<Employee>{
+//	 
+//    @Override
+//    public int compare(Employee e1, Employee e2) {
+//        if(e1.getId() == e2.getId()){
+//            return 0;
+//        } if(e1.getId() < e2.getId()){
+//            return 1;
+//        } else {
+//            return -1;
+//        }
+//    }
+//}
+// 
+
+
+public class HasMApComparable {
+	public static void main(String args[]) {
+
+	Map<Object, String> hmap = new HashMap<Object, String>();
+	
+	hmap.put(new Employee(1), "Manager");
+	hmap.put(new Employee(2), "Director");
+	hmap.put(new Employee(3), "ChairPerson");
+	hmap.put(new Employee(4), "Project Manager");
+	hmap.put(new Employee(3), "ChairPerson");
+	
+	Set set = hmap.entrySet();
+	Iterator it = set.iterator();
+	
+	while(it.hasNext()) {
+		Map.Entry val = (Map.Entry) it.next();
+		
+		System.out.println(val.getKey() + "---Record-----" + val.getValue());
+	}
+	}
+}

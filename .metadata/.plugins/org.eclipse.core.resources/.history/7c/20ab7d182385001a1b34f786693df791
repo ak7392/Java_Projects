@@ -1,0 +1,31 @@
+package Comparator_Practise;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.TreeSet;
+
+
+class Comparator_Class implements Comparator{
+
+	@Override
+	public int compare(Object o1, Object o2) {
+		String st1 = (String) o1; 
+		String st2 = (String) o2; 
+		
+		return -st1.compareTo(st2);
+	}
+	
+}
+
+public class Compartor_Example {
+	
+	public static void main(String args[]) {
+		TreeSet ts = new TreeSet(new Comparator_Class());
+		ts.add("abhi");
+		ts.add("New_method");
+		ts.add("Kannojia"); 
+		ts.add("practise");
+		
+		
+	}
+
+}

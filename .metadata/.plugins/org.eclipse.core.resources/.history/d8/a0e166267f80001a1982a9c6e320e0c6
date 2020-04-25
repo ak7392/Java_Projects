@@ -1,0 +1,49 @@
+package CollectionsAssignmentPackage;
+import java.util.*;
+
+//class EmpComp implements Comparator<Employee>{
+//	 
+//    @Override
+//    public int compare(Employee e1, Employee e2) {
+//        if(e1.getId() == e2.getId()){
+//            return 0;
+//        } if(e1.getId() < e2.getId()){
+//            return 1;
+//        } else {
+//            return -1;
+//        }
+//    }
+//}
+// 
+
+
+public class HasMApComparable {
+	public static void main(String args[]) {
+
+	TreeMap<Object, String> hmap = new TreeMap<Object, String>();
+	
+	hmap.put(new Employee(1), "Manager");
+	hmap.put(new Employee(2), "Director");
+	hmap.put(new Employee(3), "ChairPerson");
+	hmap.put(new Employee(4), "Project Manager");
+	hmap.put(new Employee(3), "ChairPerson");
+	
+	Set set = hmap.entrySet();
+	Iterator it = set.iterator();
+	
+	while(it.hasNext()) {
+		Map.Entry val = (Map.Entry) it.next();
+		Employee val2 = (Employee) val.getKey();
+		System.out.println(val2.getId() + "---Record-----" + val.getValue());
+	}
+	}
+}
+
+//Output -
+//4---Record-----Project Manager
+//3---Record-----ChairPerson
+//3---Record-----ChairPerson
+//2---Record-----Director
+//1---Record-----Manager
+
+

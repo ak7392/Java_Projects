@@ -1,0 +1,20 @@
+package Exception_Programs;
+
+class nonintresultexception  extends RuntimeException{ // Since this is Superclass for 
+	public nonintresultexception(String i) {
+		super(i);
+	}
+	
+}
+
+public class ExceptionAssignmentQues1 {
+	
+	public double divideIntegers(double i, double j) {
+		 double quotient = i / j;
+		 if (quotient != Math.floor(quotient)) 
+			throw new nonintresultexception("Division is not an integer");
+		return quotient;
+		
+	}
+	
+}

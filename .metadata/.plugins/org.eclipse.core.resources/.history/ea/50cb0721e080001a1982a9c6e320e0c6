@@ -1,0 +1,25 @@
+package CollectionsAssignmentPackage;
+import java.util.*;
+
+public class ArrayListOperations {
+	
+	public static void main(String args[]) {
+		ArrayList<Integer> arr = new ArrayList<Integer>();
+		Set<Integer> hset = new HashSet<Integer>();
+		arr.add(1);
+		arr.add(2);
+		arr.add(3);
+		arr.add(4);
+		arr.add(3);
+		
+		
+		
+		
+		for(int i = arr.size()-1; i >=0; i--) {
+			hset.add(arr.get(i));
+		}
+		System.out.println(hset);
+		
+		
+	}
+}

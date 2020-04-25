@@ -1,0 +1,33 @@
+package Hotel_Components;
+
+public class HotelTest {
+	
+	public static void main(String args[]) {
+		Hotel2 obj1 = new Hotel2("RAMADA", "Chennai");
+		obj1.addRooms(10);
+		obj1.addReservation(1, "Abhinav", 'y',"King", 1200.00);
+		obj1.addReservation(2, "Bet", 'y',"King", 1300.00);
+		obj1.addReservation(3, "Greg", 'y',"King", 1250.00);
+		obj1.addReservation(4,"Jole", 'y', "Queen", 1250.00);
+		obj1.addReservation(5,"Cassandra", 'n', "Queen", 1250.00);
+		obj1.addReservation(6,"Tony",'n', "King",  1250.00);
+
+		obj1.toString();
+		
+
+		System.out.println("---------------------------");
+		System.out.println("Testing Some Basic Functions");
+		System.out.println("---------------------------");
+		System.out.println("Occupancy Percentage: ");
+		obj1.occupancyPercentage();
+
+		
+		obj1.cancelReservation("Abhinav");
+		
+		obj1.toString();
+		
+	}
+
+}
+
+

@@ -1,0 +1,23 @@
+package PatternUsingForLoops;
+import java.util.Scanner;
+public class SquarewithBlankMidSpace {
+	
+	public static void main(String args[]) {
+			
+			Scanner sc = new Scanner(System.in);
+			
+			System.out.println("Enter No. of Rows: ");
+			
+			int row = sc.nextInt();
+			
+			for (int i =0; i <=row-1; i++) {
+				for (int j= 0; j <= row-1; j++) {
+					System.out.print("*");
+//					if (i == 1 || i == row) System.out.print("*");
+//					else if(j == 1 || j == row) System.out.print("*");
+				}
+				System.out.println();
+				}
+
+	}
+}

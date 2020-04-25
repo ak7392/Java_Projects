@@ -1,0 +1,16 @@
+package PatternUsingForLoops;
+
+public class DiamondHollowPattern {
+	public static void main() {
+		int row = 5;
+		 
+		for(int i=0; i < row; i ++) {
+			for (int j = 0; j< row; j ++) {
+				if (( j+i == (row/ 2)) || (i-j == (row/2)) || ((j-i) == (row/2)) || ((i+j) == (row-1+(row/2)) )){
+					System.out.println("* ");
+				}
+				System.out.println();
+			}
+		}
+	}
+}

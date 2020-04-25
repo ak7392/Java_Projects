@@ -1,0 +1,57 @@
+package CollectionsAssignmentPackage;
+import java.util.*;
+
+public class MissingRepeatElements {
+	
+	public static void ConsecutiveIntegers(ArrayList<Integer> arr){
+		
+		Map<Integer, Integer> hm = new HashMap();
+	
+		int[] result = new int[arr.size()];
+		for (int i = 1; i < arr.size()-1; i++) {
+			if ( arr.get(i-1) != arr.get(i)+1) {
+				System.out.println("Missing Number: "+ arr.get(i));
+			}
+		}
+			
+		for (Integer item: arr) {	
+			 if (hm.containsKey(item)){
+				hm.put(arr.get(item), hm.get(item)+1);
+			}else {
+				hm.put(arr.get(item), 1);
+			}
+		}
+					
+					
+		for (Map.Entry<Integer , Integer> val: hm.entrySet()) {
+			if (val.getValue() > 1) {
+				System.out.println("Repeating Element"+ val.getKey() );
+			}
+		
+		
+		}
+	}
+	
+	
+	public static void main(String args[]) {
+//		Scanner sc = new Scanner(System.in);
+		
+		ArrayList<Integer> arr = new ArrayList<Integer>();
+		arr.add(3);
+		arr.add(1);
+		arr.add(3);
+//		do {
+//			System.out.println("Enter values to List in Order to find repeating Elements");
+//			int n1 = sc.nextInt();
+//			arr.add(n1);
+//			
+//		}while(sc.nextLine() == "N");
+//		
+		
+		ConsecutiveIntegers(arr);
+	
+	}
+}
+	
+	
+
