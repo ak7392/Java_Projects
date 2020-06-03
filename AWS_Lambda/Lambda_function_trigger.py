@@ -30,6 +30,6 @@ def lambda_handler(event, context):
 
     message = {"Subject": {"Data": subject}, "Body": {"Html": {"Data": body}}}
 
-    response = client.send_email(Source = "ak7357@nyu.edu", Destination = {"ToAddresses": ["ak7357@nyu.edu"]}, Message = message)
+    response = client.send_email(Source = "<Sender-EMAIL>", Destination = {"ToAddresses": ["<notification-email>"]}, Message = message)
 
     return "Thanks"
